@@ -1,8 +1,126 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-  <head><title>西川幸志のポートフォリオ</title></head>
-  <body>
-    <h1>こんにちは！西川幸志です</h1>
-    <p>筑波大学大学院で情報検索とLLMの研究をしています。</p>
-  </body>
+	<head>
+		<title>西川幸志 | Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header（左側の固定メニュー） -->
+			<section id="header">
+				<header>
+					<!-- ↓自分の顔写真やアイコンがある場合は images/avatar.jpg を差し替えてください -->
+					<span class="image avatar"><img src="images/avatar.jpg" alt="avatar" /></span>
+					<h1 id="logo"><a href="#">西川 幸志</a></h1>
+					<p>筑波大学大学院 情報学学位プログラム<br />
+					探す手間をなくし、選ぶ楽しさを最大化するエンジニア</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#about" class="active">About Me</a></li>
+						<li><a href="#projects">Projects</a></li>
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<!-- GitHubのリンク -->
+						<li><a href="https://github.com/k-nishikawa21" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Wrapper（右側のメインコンテンツ） -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- About セクション -->
+							<section id="about">
+								<div class="image main" data-position="center">
+									<!-- ↓上部の大きな画像です images/banner.jpg を好きな画像に変えられます -->
+									<img src="images/banner.jpg" alt="" />
+								</div>
+								<div class="container">
+									<header class="major">
+										<h2>About Me</h2>
+										<p>データと技術で、本質的な課題を解決する。</p>
+									</header>
+									<p>筑波大学大学院にて、「ユーザーが検索ワードを入力しなくても、欲しい情報が先回りで提示される仕組み（能動的情報検索）」をテーマに、情報検索とLLM（大規模言語モデル）を組み合わせた研究を行っています。<br>
+									ただ技術を使うだけでなく、「ユーザーの潜在的な課題を見抜き、どう仕組みで解決するか」を考えることに最もやりがいを感じます。技術とビジネスの両視点を持ち、サービスの成長を牽引できるエンジニア／データサイエンティストを目指しています。</p>
+								</div>
+							</section>
+
+						<!-- Projects セクション -->
+							<section id="projects">
+								<div class="container">
+									<h3>Projects / 開発実績</h3>
+									<p>これまで個人やチームで開発したツール・研究の成果物です。画像をクリックするとGitHubのリポジトリ（詳細）へ遷移します。</p>
+									<div class="features">
+										
+										<!-- 作品1: H-MAPS -->
+										<article>
+											<a href="https://github.com/kasys-lab/H-MAPS" target="_blank" class="image"><img src="images/pic01.jpg" alt="" /></a>
+											<div class="inner">
+												<h4>能動的文献検索アシスタント『H-MAPS』</h4>
+												<p>閲覧中の画面情報と過去の興味関心から「今知りたいこと」を推論し、自動で関連文献を提示するシステム。外部APIに依存せず、Tesseract(OCR)、FAISS(ベクトル検索)、Local LLMを用いて完全ローカル環境で動作するアーキテクチャを構築しました。（SIGIR '26 投稿中）</p>
+											</div>
+										</article>
+
+										<!-- 作品2: Hand-Write Flip -->
+										<article>
+											<a href="https://github.com/k-nishikawa21/Hand-Write-Flip" target="_blank" class="image"><img src="images/pic02.jpg" alt="" /></a>
+											<div class="inner">
+												<h4>ライブ配信向け手書きフリップアプリ</h4>
+												<p>オンライン配信などで、参加者がスマホのブラウザから手書きしたフリップ（回答）を、リアルタイムに配信者の画面（OBS等）へ一括表示できるWebアプリです。Python(Flask), JavaScript, ngrokを用いて開発し、実際の配信イベントで利用されました。</p>
+											</div>
+										</article>
+
+										<!-- 作品3: OBS Brightness Sync -->
+										<article>
+											<a href="https://github.com/k-nishikawa21/OBS-Brightness-Sync" target="_blank" class="image"><img src="images/pic03.jpg" alt="" /></a>
+											<div class="inner">
+												<h4>VTube Studio連動 輝度同期ツール</h4>
+												<p>PCのゲーム画面の明るさ（輝度）をリアルタイムに解析し、VTube Studioのアバターの瞳孔パラメータなどと連動させる支援ツールです。OpenCVで高速な画像処理を行い、Tkinterで使いやすいGUIを実装しました。</p>
+											</div>
+										</article>
+
+										<!-- 作品4: チーム開発 (sakura_d_sashiniko) -->
+										<article>
+											<a href="https://github.com/k-nishikawa21/sakura_d_sashiniko" target="_blank" class="image"><img src="images/pic01.jpg" alt="" /></a>
+											<div class="inner">
+												<h4>【チーム開発】ハッカソン用Webアプリ</h4>
+												<p>4名のチーム開発において、バックエンドの実装およびGit/GitHubを用いた開発フローの整備を担当しました。フロントエンドとのAPI仕様のすり合わせや、ブランチ運用のルール化を行い、スムーズな共同開発を実現しました。</p>
+											</div>
+										</article>
+
+									</div>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Koji Nishikawa. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
